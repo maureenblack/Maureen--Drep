@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "authors": [
+    {
+      "name": "Maureen"
+    }
+  ],
+  "body": {
+    "summary": "Abstaining, leaning No. A team that ships, with milestones anyone can check on-chain, but the Treasury pays for a state's build under confidential agreements only the Cardano Foundation has seen.",
+    "rationaleStatement": "Trivolve has done the hard part already. FMS is live on mainnet, past 156,000 transactions. PFMS has milestones anyone can check: 100,000 live transactions by month 12 and 390,000 over three months by month 15. Spending is capped at $0.30 per ADA. Love that.\n\nMy hesitation is about who pays. The Telangana government wants this system, and Trivolve gets maintenance fees from the state under a separate agreement. We'd cover the ₳9.6M build. Those agreements are confidential, and the only outside party that has read them is the Cardano Foundation, which co-wrote the proposal and would also administer the money. ₳1.8M goes out at contract signing, before any work. And the \"multi-sig\" in the text is a single-key address on-chain.\n\nGood team, awkward deal. Show the state's side of the bargain publicly and sort out custody, and I'm likely a Yes. Until then I'm sitting this one out, leaning No.",
+    "precedentDiscussion": "On Eternl I said a vendor's ongoing costs are a business problem, not a Treasury problem. On Blockfrost's NFP I wanted the governance in place before the money. Both apply here.",
+    "counterargumentDiscussion": "Supporters point to real government use and the clearest usage milestones of any open ask. All true, and it's why I'm not voting No. Others ask why the Treasury pays for software a government wants. I'd like that answered in public, not just to the administrator.",
+    "conclusion": "Sitting out for now. Public terms from the state, real multisig custody and a first payment tied to a deliverable would get me to Yes. Silence on the Foundation's double role gets a No.",
+    "references": [
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal anchor: Police Force Management System (PFMS) on Cardano, by Trivolve Tech",
+        "uri": "ipfs://QmQJM9FmVs1HHeqz4PBEhizicsuXEp3VkdEMjqApG7KsBT",
+        "referenceHash": {
+          "hashDigest": "09e2ef6f02fd53aab203c872f082f888e8c53b383377a13e3b71eb08550be389",
+          "hashAlgorithm": "blake2b-256"
+        }
+      },
+      {
+        "@type": "Other",
+        "label": "Cardanoscan: governance action",
+        "uri": "https://cardanoscan.io/govAction/gov_action1wfy3vzxurfgq6wrpxg2qdx3t6wm7ng8xwr26h47kxa8xhd20cr5qqz0wzfc"
+      },
+      {
+        "@type": "Other",
+        "label": "PFMS work packages and milestones",
+        "uri": "https://raw.githubusercontent.com/Trivolvetech-PFMS/pfms-proposal/914e75f9fe2d2a6cdfe8599af7279b8e3d062fcf/PFMS_Work_Packages_and_Milestones.pdf"
+      },
+      {
+        "@type": "Other",
+        "label": "Tingvard CC rationale",
+        "uri": "https://ipfs.blockfrost.dev/ipfs/QmfPv2y4Yyh8qTsRiancNRokyPz2W32jXjuxD9XS65oxpq"
+      }
+    ]
+  }
+}
