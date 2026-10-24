@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "authors": [
+    {
+      "name": "Maureen"
+    }
+  ],
+  "body": {
+    "summary": "No for now. AURORA builds a nice market stall for on-chain loans, but nobody has agreed to use it yet, delivery ends at a testnet demo, and the anchor sits on an editable GitHub branch. Fairway is resubmitting.",
+    "rationaleStatement": "AURORA wants ₳940K to build a really nice market stall for on-chain loans. Open source, independent multisig, audits, and aimed at credit cooperatives in Africa. I love the stall.\n\nBut nobody has agreed to sell anything at it yet. No lender, no cooperative, no protocol. The build ends at a testnet demo, ₳140K goes out on day one, and the proposal sits on a GitHub branch that can be edited after we vote.\n\nSo it's No for now. Fairway says they're resubmitting. Come back with the anchor on IPFS and one cooperative already standing behind the counter, and we'll talk.",
+    "precedentDiscussion": "Same thing I asked the Global Order Book team: show one adopter outside your own team before asking again.",
+    "counterargumentDiscussion": "The stall is cheap and well guarded: ₳940K, an independent 3-of-5 multisig, audits after M2 and M4. Agreed. But without one committed lender or cooperative, there's no way to know at the end whether anyone uses it.",
+    "conclusion": "No on this version. Put the anchor on IPFS, bring one lender or cooperative already committed, and I'm happy to look again.",
+    "references": [
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal anchor: AURORA",
+        "uri": "https://raw.githubusercontent.com/fairway-global/aurora-proposal/refs/heads/main/data.jsonld",
+        "referenceHash": {
+          "hashDigest": "2791bc5d48adfdb1d56b072891cfe0cd1e7235941e157d3c45774ea29b468fb1",
+          "hashAlgorithm": "blake2b-256"
+        }
+      },
+      {
+        "@type": "Other",
+        "label": "Cardanoscan: governance action",
+        "uri": "https://cardanoscan.io/govAction/gov_action1znt2fr0chyye50nj0cdld2dvdjg3xsdfvq0fr37n43uehlvfkqdsqjnuq3n"
+      },
+      {
+        "@type": "Other",
+        "label": "AURORA proposal snapshot (GitHub release)",
+        "uri": "https://github.com/fairway-global/aurora-proposal/releases/tag/proposal-snapshot-2026-10-18"
+      },
+      {
+        "@type": "Other",
+        "label": "Fairway on resubmission",
+        "uri": "https://x.com/fairway_global/status/2113231269425217847"
+      }
+    ]
+  }
+}

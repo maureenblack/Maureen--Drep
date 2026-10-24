@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "authors": [
+    {
+      "name": "Maureen"
+    }
+  ],
+  "body": {
+    "summary": "Voting No. ₳22M on copper that has to rise about 49% before the Treasury breaks even, with the token minted on Ethereum, a self-administering recipient and a staked receiving address.",
+    "rationaleStatement": "A copper reserve for the Treasury. I read the whole thing, PDF included.\n\nHere's the maths that stopped me. Of the ₳22M, ₳14.7M buys copper. The rest goes to fees, storage, insurance and oversight. Toto's own numbers say copper has to climb from about $6.73 to $10.06 a pound before we get our money back, and the principal isn't guaranteed.\n\nThe token is minted on Ethereum. Cardano gets the bridged copy. Toto would administer its own grant, the receiving address is delegated to a stake pool (§7.6 rules that out), and the anchor is a link on Toto's own website.\n\nIt's also more than half of what's left under the Net Change Limit.\n\nIf I wanted a copper position, I'd call a broker, not the Treasury.\n\nSo, No. A small pilot, minted natively on Cardano, with an independent administrator and protected principal? That one I'd read with interest.",
+    "precedentDiscussion": "Same family of questions I raised on Haus and tokenized home equity: legal structure, liability, and what happens when prices move the wrong way. I also voted against raising the Net Change Limit to 500M, and this single ask would use roughly 52% of the room that raise created.",
+    "counterargumentDiscussion": "Toto says this is an investment, not a grant, and that 49% over three years is under 15% a year. Fair framing, but it's still a price rise the market has to deliver before we see our ₳22M again. Loans with defined repayment are where I've been comfortable taking Treasury risk.",
+    "conclusion": "No. Shrink it, mint on Cardano, bring in an independent administrator who has already signed on, put the milestones in the hashed metadata, and protect the principal.",
+    "references": [
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal anchor: Cardano Strategic Copper Reserve | ₳22M RWA Tokenization",
+        "uri": "https://totofinance.com/cardano-treasury-proposal-strategic-tokenized-copper-reserve/data.jsonld",
+        "referenceHash": {
+          "hashDigest": "b2bdccb6d772bae43613612a745ed19f80ba4692c0e1616a2e61606d379953c0",
+          "hashAlgorithm": "blake2b-256"
+        }
+      },
+      {
+        "@type": "Other",
+        "label": "Cardanoscan: governance action",
+        "uri": "https://cardanoscan.io/govAction/gov_action1dmwlfuwm45r0x2d2d96r2kwyjv9hk6ylzmq8xpsay2xecesn6xwqqdlv55z"
+      },
+      {
+        "@type": "Other",
+        "label": "Proposal PDF (Toto Finance)",
+        "uri": "https://totofinance.com/cardano-treasury-proposal-strategic-tokenized-copper-reserve/Cardano_Toto-Finance_Tokenized_Copper_CuTT_Treasury_Proposal.pdf"
+      },
+      {
+        "@type": "Other",
+        "label": "Tingvard CC rationale",
+        "uri": "https://ipfs.blockfrost.dev/ipfs/QmUPLkpN25LzwEKhRz94ztFnMJQTuE7skgQKc9SPkiByUq"
+      },
+      {
+        "@type": "Other",
+        "label": "Ace Alliance CC rationale",
+        "uri": "ipfs://bafkreibp7vywhqpmgbqlv6q3qwpfpzbvwrdgyiwiyliyqaf7oqhowejr74"
+      }
+    ]
+  }
+}
